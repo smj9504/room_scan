@@ -1,5 +1,9 @@
 import UIKit
 import Flutter
+import Foundation
+
+
+import ARKit
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -11,6 +15,7 @@ import Flutter
     let lidarChannel = FlutterMethodChannel(name: "lidar_scan",
                                               binaryMessenger: controller.binaryMessenger)
 
+    // Make sure LidarScanner is accessible
     let scanner = LidarScanner()
 
     lidarChannel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
