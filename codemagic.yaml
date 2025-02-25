@@ -12,6 +12,10 @@ workflows:
           include: true
           source: true
     scripts:
+      - name: Check Flutter & Dart Version
+        script: |
+          flutter --version
+          dart --version
       - name: Install dependencies
         script: |
           flutter --version
